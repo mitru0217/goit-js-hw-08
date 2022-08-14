@@ -1,3 +1,4 @@
+import throttle from "lodash.throttle";
 const STORAGE_KEY = `feedback-form-state`;
 
 const formData = {};
@@ -11,12 +12,13 @@ const refs = {
  saveLocaleStorage ();
 
 refs.form.addEventListener("submit", onFormSubmit);
+
 refs.form.addEventListener("input", e => {
     formData[e.target.name] = e.target.value;
-   
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-
 });
+
+refs.textarea.addEventListener("input", throttle(onTextareaInput, 500));
 
 function onFormSubmit(e) {
     e.preventDefault();
@@ -40,4 +42,7 @@ function saveLocaleStorage () {
       }
     }
 
-
+function onTextareaInput (evt) {
+   const message = evt.target.value;
+   localStorage.setItem(STORAGE_KEY, message); 
+}
