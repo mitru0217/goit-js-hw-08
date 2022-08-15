@@ -18,7 +18,7 @@ refs.form.addEventListener("input", e => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 });
 
-refs.textarea.addEventListener("input", throttle(onTextareaInput, 500));
+
 
 function onFormSubmit(e) {
     e.preventDefault();
@@ -41,8 +41,8 @@ function saveLocaleStorage () {
         }
       }
     }
-
-function onTextareaInput (evt) {
-   const message = evt.target.value;
-   localStorage.setItem(STORAGE_KEY, message); 
-}
+// refs.textarea.addEventListener("input", throttle(onTextareaInput, 500));
+// function onTextareaInput (evt) {
+//    const message = evt.target.value;
+//    localStorage.setItem(STORAGE_KEY, message); 
+// }
