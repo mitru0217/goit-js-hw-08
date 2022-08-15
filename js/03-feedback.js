@@ -18,8 +18,6 @@ refs.form.addEventListener("input", e => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 });
 
-
-
 function onFormSubmit(e) {
     e.preventDefault();
     if(refs.textarea.value === "" || refs.input.value === "") {
