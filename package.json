@@ -2,7 +2,7 @@
   "name": "goit-js-hw-08",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build  src/*.html --public-url/goit-js-hw-08/"
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/mitru0217/goit-js-hw-08/issues"
   },
-  "homepage": "https://github.com/mitru0217/goit-js-hw-08/",
+  "homepage": "https://mitru0217.github.io/goit-js-hw-08/",
   "dependencies": {
     "@vimeo/player": "^2.17.1",
     "lodash.throttle": "^4.1.1",
